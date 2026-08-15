@@ -2,15 +2,20 @@
     box-sizing: border-box;
 }
 
-h1, h2, p, ul {
+body {
     margin: 0;
 }
 
-body {
+.container {
     font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 18px;
     line-height: 18px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 220px;
+    background-image: url("images/background_image.png");
+    background-repeat: no-repeat;
 }
 
 .title {
@@ -19,15 +24,16 @@ body {
     line-height: 78px;
     text-align: center;
     color: #515076;
-    margin-top: 220px;
     margin-bottom: 110px;
     padding: 0;
 }
 
 .products-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
 }
 
 .product-card {
@@ -35,8 +41,9 @@ body {
     color: #515076;
     width: 340px;
     height: 573px;
-    margin: 0 0 5px;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-image {
@@ -46,6 +53,7 @@ body {
 
 .product-use {
     font-size: 12px;
+    text-transform: uppercase;
     color: #A5A3B9;
     display: block;
     margin: 30px 0 11px;
@@ -72,10 +80,17 @@ body {
 .compound-description {
     font-size: 13px;
     margin: 0 0 25px;
+    padding-left: 15px;
 }
 
 .compound-description li {
-    margin: 0 0 5px -25px;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
 }
 
 .sell {
@@ -87,5 +102,4 @@ body {
 .price {
     font-size: 20px;
     line-height: 24px;
-    float: right;
 }
