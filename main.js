@@ -49,3 +49,12 @@ function outputConsoleLog(message) {
 }
 
 outputConsoleLogButton.addEventListener('click', () => outputConsoleLog('Hello World'));
+
+// Вывод заголовка в консоль при наведени
+
+const pageTitle = document.querySelector('.title');
+
+pageTitle.addEventListener('mouseover', (e) => {
+    const textTitle = e.target.textContent;
+    console.log(textTitle);
+});
