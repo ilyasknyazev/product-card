@@ -46,12 +46,12 @@ body {
     flex-direction: column;
 }
 
-.product-image {
+.product-card__image {
     display: block;
     margin: 0 auto;
 }
 
-.product-use {
+.product-card__use {
     font-size: 12px;
     text-transform: uppercase;
     color: #A5A3B9;
@@ -59,47 +59,47 @@ body {
     margin: 30px 0 11px;
 }
 
-.product-title {
+.product-card__title {
     font-size: 20px;
     font-weight: 700;
     line-height: 27px;
     margin: 0 0 5px;
 }
 
-.product-description {
+.product-card__description {
     font-size: 13px;
     margin: 0 0 15px;
 }
 
-.product-compound {
+.product-card__compound {
     font-size: 13px;
     display: block;
     margin: 0 0 5px;
 }
 
-.compound-description {
+.product-card__components {
     font-size: 13px;
     margin: 0 0 25px;
     padding-left: 15px;
 }
 
-.compound-description li {
+.product-card__components li {
     margin-bottom: 5px;
 }
 
-.product-price {
+.product-card__purchase {
     display: flex;
     justify-content: space-between;
     margin-top: auto;
 }
 
-.sell {
+.product-card__sell {
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
 }
 
-.price {
+.product-card__price {
     font-size: 20px;
     line-height: 24px;
 }
