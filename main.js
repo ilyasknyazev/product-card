@@ -58,3 +58,11 @@ pageTitle.addEventListener('mouseover', (e) => {
     const textTitle = e.target.textContent;
     console.log(textTitle);
 });
+
+// Кнопка, меняющая цвета по нажатию
+
+const changeBgColorButton = document.querySelector('#change-bgColor');
+
+changeBgColorButton.addEventListener('click', () => {
+    changeBgColorButton.classList.toggle('another-color');
+});
