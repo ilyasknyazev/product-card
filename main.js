@@ -17,3 +17,24 @@ const lightgrayColorHash = '#9392ad';
 changeColorFirstCardButton.addEventListener('click', () => {
     firstproductCard.style.backgroundColor = lightgrayColorHash; 
 });
+
+// Открыть google 
+
+const openGooglePageButton = document.querySelector('#open-google-page');
+const googleURL = 'https://www.google.com';
+
+/*openGooglePageButton.addEventListener(('click'), () => {
+    window.open(googleURL);
+});*/
+
+function openGoogle() {
+    const answer = confirm('Вы действительно хотите открыть Google?');
+
+    if (answer === true) {
+        window.open(googleURL);
+    } else {
+        return;
+    }
+}
+
+openGooglePageButton.addEventListener('click', openGoogle);
