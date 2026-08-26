@@ -38,3 +38,14 @@ function openGoogle() {
 }
 
 openGooglePageButton.addEventListener('click', openGoogle);
+
+// Вывод console log
+
+const outputConsoleLogButton = document.querySelector('#output-console-log');
+
+function outputConsoleLog(message) {
+    alert(message);
+    console.log(message);
+}
+
+outputConsoleLogButton.addEventListener('click', () => outputConsoleLog('Hello World'));
