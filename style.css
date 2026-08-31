@@ -28,6 +28,29 @@ body {
     padding: 0;
 }
 
+.block-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button {
+    border: none;
+    background-color: #515076;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 15em;
+    height: 4em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+}
+
 .products-list {
     list-style: none;
     display: flex;
@@ -102,4 +125,8 @@ body {
 .product-card__price {
     font-size: 20px;
     line-height: 24px;
+}
+
+.another-color {
+    background-color: #8B88EB;
 }
