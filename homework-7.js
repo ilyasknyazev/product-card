@@ -1,29 +1,29 @@
 const displayTemperature = (city, temp) => {
-    console.log(`Сейчас в ${city} температура ${temp} градусов по Цельсию`);
+    return `Сейчас в ${city} температура ${temp} градусов по Цельсию`;
 };
 
-displayTemperature("Москва", 40);
+console.log(displayTemperature("Москва", 40));
 
 const SPEED_OF_LIGHT = 299792458;
 
 const compareSpeed = (speed) => {
     if (speed > SPEED_OF_LIGHT) {
-        console.log("Сверхсветовая скорость");
+        return "Сверхсветовая скорость";
     } else if (speed < SPEED_OF_LIGHT) {
-        console.log("Субсветовая скорость");
+        return "Субсветовая скорость";
     } else {
-        console.log("Скорость света");
+        return "Скорость света";
     }
 }
 
-compareSpeed(1000);
+console.log(compareSpeed(1000));
 
 let product = "RTX 2060";
 let price = 13900;
 
 const canPurchase = (current_budget) => {
-    let result = current_budget >= price ? `${product} - приобретён` : `Вам не хватает ${price - current_budget} пополните баланс`;
-    console.log(result);
+    const result = current_budget >= price ? `${product} - приобретён` : `Вам не хватает ${price - current_budget} пополните баланс`;
+    return result;
 }
 
-canPurchase(2000);
+console.log(canPurchase(2000));
