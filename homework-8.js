@@ -45,3 +45,51 @@ console.log(showPropertyValue(car, 'brand'));
 const products = ['Ноутбук', 'Смартфон', 'Наушники', 'Монитор'];
 console.log(products);
 
+const books = [
+  {
+    title: 'Мастер и Маргарита',
+    author: 'Михаил Булгаков',
+    releaseYear: 1967,
+    coverColor: 'Красный',
+    genre: 'Роман'
+  },
+  {
+    title: 'Преступление и наказание',
+    author: 'Фёдор Достоевский',
+    releaseYear: 1866,
+    coverColor: 'Чёрный',
+    genre: 'Психологический роман'
+  },
+  {
+    title: '1984',
+    author: 'Джордж Оруэлл',
+    releaseYear: 1949,
+    coverColor: 'Синий',
+    genre: 'Антиутопия'
+  },
+  {
+    title: 'Гарри Поттер и философский камень',
+    author: 'Джоан Роулинг',
+    releaseYear: 1997,
+    coverColor: 'Зелёный',
+    genre: 'Фэнтези'
+  },
+  {
+    title: 'Маленький принц',
+    author: 'Антуан де Сент-Экзюпери',
+    releaseYear: 1943,
+    coverColor: 'Жёлтый',
+    genre: 'Сказка'
+  }
+];
+
+books.push({
+  title: 'Три товарища',
+  author: 'Эрих Мария Ремарк',
+  releaseYear: 1936,
+  coverColor: 'Серый',
+  genre: 'Роман'
+});
+
+console.log(books);
+
