@@ -10,3 +10,17 @@ const user = {
   maritalStatus: "single",
   phone: "+7 900 123-45-67",
 };
+
+console.log(user);
+
+const car = {
+  brand: "Toyota",
+  model: "Camry",
+  year: 2022,
+  color: "Black",
+  transmission: "Automatic"
+};
+
+car.owner = user;
+console.log(car);
+console.log(car.owner.firstName);
