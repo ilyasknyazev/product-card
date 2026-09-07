@@ -35,3 +35,9 @@ function addMaxSpeed(car) {
 
 addMaxSpeed(car);
 console.log(car);
+
+function showPropertyValue(object, property) {
+  return object[property];
+}
+
+console.log(showPropertyValue(car, 'brand'));
