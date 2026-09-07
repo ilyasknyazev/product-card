@@ -14,13 +14,24 @@ const user = {
 console.log(user);
 
 const car = {
-  brand: "Toyota",
-  model: "Camry",
-  year: 2022,
-  color: "Black",
-  transmission: "Automatic"
+  brand: "Lada",
+  model: "2109",
+  year: 1994,
+  color: "Red",
+  transmission: "Manual",
 };
 
 car.owner = user;
 console.log(car);
 console.log(car.owner.firstName);
+
+function addMaxSpeed(car) {
+  if (car.maxSpeed === undefined) {
+    car.maxSpeed = 200;
+  } else {
+    return;
+  }
+}
+
+addMaxSpeed(car);
+console.log(car);
