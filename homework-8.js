@@ -41,3 +41,7 @@ function showPropertyValue(object, property) {
 }
 
 console.log(showPropertyValue(car, 'brand'));
+
+const products = ['Ноутбук', 'Смартфон', 'Наушники', 'Монитор'];
+console.log(products);
+
