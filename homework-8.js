@@ -27,7 +27,7 @@ console.log(car.owner.firstName);
 
 function addMaxSpeed(car) {
   if (car.maxSpeed === undefined) {
-    car.maxSpeed = 200;
+    car.maxSpeed = 180;
   } else {
     return;
   }
@@ -47,11 +47,11 @@ console.log(products);
 
 const books = [
   {
-    title: 'Мастер и Маргарита',
-    author: 'Михаил Булгаков',
-    releaseYear: 1967,
-    coverColor: 'Красный',
-    genre: 'Роман'
+    title: 'Евгений Онегин',
+    author: 'Александр Пушкин',
+    releaseYear: 1833,
+    coverColor: 'Синий',
+    genre: 'Роман в стихах'
   },
   {
     title: 'Преступление и наказание',
@@ -61,35 +61,70 @@ const books = [
     genre: 'Психологический роман'
   },
   {
-    title: '1984',
-    author: 'Джордж Оруэлл',
-    releaseYear: 1949,
-    coverColor: 'Синий',
-    genre: 'Антиутопия'
+    title: 'Война и мир',
+    author: 'Лев Толстой',
+    releaseYear: 1869,
+    coverColor: 'Красный',
+    genre: 'Роман-эпопея'
   },
   {
-    title: 'Гарри Поттер и философский камень',
-    author: 'Джоан Роулинг',
-    releaseYear: 1997,
-    coverColor: 'Зелёный',
-    genre: 'Фэнтези'
+    title: 'Анна Каренина',
+    author: 'Лев Толстой',
+    releaseYear: 1877,
+    coverColor: 'Золотой',
+    genre: 'Роман'
   },
   {
-    title: 'Маленький принц',
-    author: 'Антуан де Сент-Экзюпери',
-    releaseYear: 1943,
-    coverColor: 'Жёлтый',
-    genre: 'Сказка'
+    title: 'Метель',
+    author: 'Александр Пушкин',
+    releaseYear: 1831,
+    coverColor: 'Серый',
+    genre: 'Повесть'
   }
 ];
 
 books.push({
-  title: 'Три товарища',
-  author: 'Эрих Мария Ремарк',
-  releaseYear: 1936,
-  coverColor: 'Серый',
+  title: 'Мастер и Маргарита',
+  author: 'Михаил Булгаков',
+  releaseYear: 1967,
+  coverColor: 'Красный',
   genre: 'Роман'
 });
 
 console.log(books);
 
+const dostoevskyBooks = [
+  {
+    title: 'Преступление и наказание',
+    author: 'Фёдор Достоевский',
+    releaseYear: 1866,
+    coverColor: 'Чёрный',
+    genre: 'Психологический роман'
+  },
+  {
+    title: 'Идиот',
+    author: 'Фёдор Достоевский',
+    releaseYear: 1868,
+    coverColor: 'Зелёный',
+    genre: 'Роман'
+  },
+  {
+    title: 'Бесы',
+    author: 'Фёдор Достоевский',
+    releaseYear: 1872,
+    coverColor: 'Синий',
+    genre: 'Роман'
+  }
+];
+
+const allBooks = [...books, ...dostoevskyBooks];
+console.log(allBooks);
+
+function setRareStatus(books) {
+  books.forEach((book) => {
+    book.isRare = book.releaseYear > 2000;
+  });
+}
+
+setRareStatus(dostoevskyBooks);
+console.log(dostoevskyBooks);
