@@ -33,7 +33,6 @@ const commentsWithComEmail = comments.filter(comment => {
     return comment.email.includes(".com");
 });
 
-console.log("Комментарии с почтой .com:");
 console.log(commentsWithComEmail);
 
 const changedPostId = comments.map(comment => {
@@ -50,7 +49,6 @@ const changedPostId = comments.map(comment => {
     }
 });
 
-console.log("Измененный postId:");
 console.log(changedPostId);
 
 const commentsIdAndName = comments.map(comment => {
@@ -60,7 +58,6 @@ const commentsIdAndName = comments.map(comment => {
     };
 });
 
-console.log("Только id и name:");
 console.log(commentsIdAndName);
 
 const validatedComments = comments.map(comment => {
@@ -70,7 +67,6 @@ const validatedComments = comments.map(comment => {
     };
 });
 
-console.log("Комментарии с isInvalid:");
 console.log(validatedComments);
 
 // lvl 3
@@ -86,3 +82,10 @@ const emailsMap = comments.map(comment => {
 });
 
 console.log(emailsMap);
+
+
+const emailsString = emailsMap.toString();
+console.log(emailsString);
+
+const emailsJoin = emailsMap.join(" ");
+console.log(emailsJoin);
