@@ -1,3 +1,4 @@
+import { comments } from "./comments.js";
 // lvl 1
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -28,3 +29,9 @@ console.log("Перевернутый массив чисел:", reverseArray(nu
 console.log("Перевернутый массив книг:", reverseArray(books));
 
 // lvl 2
+const commentsWithComEmail = comments.filter(comment => {
+    return comment.email.includes(".com");
+});
+
+console.log("Комментарии с почтой .com:");
+console.log(commentsWithComEmail);
