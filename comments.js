@@ -70,4 +70,3 @@ export const comments = [
         body: "voluptate iusto quis nobis reprehenderit ipsum amet nulla\nquia quas velit numquam\nut eum\nvelit aut vel"
     }
 ];
-

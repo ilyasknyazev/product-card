@@ -35,3 +35,20 @@ const commentsWithComEmail = comments.filter(comment => {
 
 console.log("Комментарии с почтой .com:");
 console.log(commentsWithComEmail);
+
+const changedPostId = comments.map(comment => {
+    if (comment.id <= 5) {
+        return {
+            ...comment,
+            postId: 2
+        };
+    } else {
+        return {
+            ...comment,
+            postId: 1
+        };
+    }
+});
+
+console.log("Измененный postId:");
+console.log(changedPostId);
