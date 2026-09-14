@@ -52,3 +52,13 @@ const changedPostId = comments.map(comment => {
 
 console.log("Измененный postId:");
 console.log(changedPostId);
+
+const commentsIdAndName = comments.map(comment => {
+    return {
+        id: comment.id,
+        name: comment.name
+    };
+});
+
+console.log("Только id и name:");
+console.log(commentsIdAndName);
