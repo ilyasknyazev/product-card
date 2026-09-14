@@ -72,3 +72,17 @@ const validatedComments = comments.map(comment => {
 
 console.log("Комментарии с isInvalid:");
 console.log(validatedComments);
+
+// lvl 3
+const emailsReduce = comments.reduce((result, comment) => {
+    result.push(comment.email);
+    return result;
+}, []);
+
+console.log(emailsReduce);
+
+const emailsMap = comments.map(comment => {
+    return comment.email;
+});
+
+console.log(emailsMap);
