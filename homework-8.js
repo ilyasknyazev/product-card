@@ -121,10 +121,11 @@ const allBooks = [...books, ...dostoevskyBooks];
 console.log(allBooks);
 
 function setRareStatus(books) {
-  books.forEach((book) => {
-    book.isRare = book.releaseYear > 2000;
-  });
+  return books.map((book) => ({
+    ...book,
+    isRare: book.releaseYear > 2000,
+  }));
 }
 
-setRareStatus(dostoevskyBooks);
-console.log(dostoevskyBooks);
+const booksWithRareStatus = setRareStatus(dostoevskyBooks);
+console.log(booksWithRareStatus);
