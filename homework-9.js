@@ -62,3 +62,13 @@ const commentsIdAndName = comments.map(comment => {
 
 console.log("Только id и name:");
 console.log(commentsIdAndName);
+
+const validatedComments = comments.map(comment => {
+    return {
+        ...comment,
+        isInvalid: comment.body.length > 180
+    };
+});
+
+console.log("Комментарии с isInvalid:");
+console.log(validatedComments);
