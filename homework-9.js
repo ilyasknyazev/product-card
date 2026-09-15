@@ -16,10 +16,15 @@ const books = [
     "Метель"
 ];
 
-const bookExists = books.includes("Война и мир");
+const bookExists = (book) => {
+    if (typeof book !== "string") {
+        return "Некорректные входные параметры";
+    }
+    return books.includes(book);
+}
 
 console.log("Исходный массив книг:", books);
-console.log("Существует ли книга 'Война и мир'?", bookExists);
+console.log("Существует ли книга 'Война и мир'?", bookExists("Война и мир"));
 
 const reverseArray = (arr) => {
     return arr.reverse();
