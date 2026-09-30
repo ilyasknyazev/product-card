@@ -1,7 +1,9 @@
+export const IMAGE_PATH = "images/";
+
 export const products = [
     {
         id: 1,
-        image: "images/mousse_diamaint.png",
+        image: "mousse_diamaint.png",
         use: "для нормальной кожи",
         title: "Увлажняющий мусс",
         description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.",
@@ -15,7 +17,7 @@ export const products = [
 
     {
         id: 2,
-        image: "images/mask_diamaint.png",
+        image: "mask_diamaint.png",
         use: "для нормальной кожи",
         title: "Увлажняющая маска",
         description: "Способствует удерживанию влаги в верхних слоях кожи.",
@@ -29,7 +31,7 @@ export const products = [
 
     {
         id: 3,
-        image: "images/gel_diamaint.png",
+        image: "gel_diamaint.png",
         use: "для нормальной кожи",
         title: "Гель для умывания",
         description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
@@ -43,7 +45,7 @@ export const products = [
 
     {
         id: 4,
-        image: "images/gift_set_num_one.png",
+        image: "gift_set_num_one.png",
         use: "для нормальной кожи",
         title: "Подарочный набор №1",
         description: "Набор, состоящий из увлажняющего крема и маски.",
@@ -57,7 +59,7 @@ export const products = [
 
     {
         id: 5,
-        image: "images/gift_set_num_five.png",
+        image: "gift_set_num_five.png",
         use: "для нормальной кожи",
         title: "Подарочный набор №5",
         description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",

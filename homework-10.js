@@ -1,4 +1,4 @@
-import { products } from "./products.js";
+import { products, IMAGE_PATH } from "./products.js";
 
 function getCardsCount() {
     const count = prompt("Сколько карточек отобразить? От 1 до 5");
@@ -28,7 +28,7 @@ function renderCards(products) {
         const components = card.querySelector(".product-card__components");
         const price = card.querySelector(".product-card__price");
 
-        image.src = products[i].image;
+        image.src = `${IMAGE_PATH}${products[i].image}`;
         image.alt = `Товар ${products[i].title}`;
 
         use.textContent = products[i].use;
