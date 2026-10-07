@@ -26,7 +26,6 @@ closedLoginButton.addEventListener('click', (event) => {
 let user;
 
 const registrationForm = document.querySelector('#registration-form');
-const modal = document.querySelector('#modal');
 
 registrationForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -58,5 +57,5 @@ registrationForm.addEventListener('submit', (event) => {
 
     console.log(user);
 
-    modal.classList.remove('modal-showed');
+    loginWindow.classList.remove('modal-showed');
 });
