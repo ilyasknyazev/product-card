@@ -10,45 +10,151 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Выбери свой продукт</h1>
-        <div class="block-buttons">
-            <button id="change-color-all-card" class="button">Сменить цвет всех карточек</button>
-            <button id="change-color-first-card" class="button">Сменить цвет первой карточки</button>
-            <button id="open-google-page" class="button">Открыть страницу Google.com</button>
-            <button id="output-console-log" class="button">Вывести сообщение в консоль</button>
-            <button id="change-bgColor" class="button">Сменить цвет кнопки</button>
+    <main class="main">
+        <div class="container">
+            <h1 class="title">Выбери свой продукт</h1>
+            <div class="block-buttons">
+                <button id="open-login" class="button">Регистрация</button>
+                <button id="change-color-all-card" class="button">Сменить цвет всех карточек</button>
+                <button id="change-color-first-card" class="button">Сменить цвет первой карточки</button>
+                <button id="open-google-page" class="button">Открыть страницу Google.com</button>
+                <button id="output-console-log" class="button">Вывести сообщение в консоль</button>
+                <button id="change-bgColor" class="button">Сменить цвет кнопки</button>
+            </div>
+            
+            <ul class="products-list"></ul>
+            
+            <template id="product-template">
+                <li class="product-card">
+                    <img class="product-card__image" src="" alt="">
+
+                    <span class="product-card__use"></span>
+
+                    <h2 class="product-card__title"></h2>
+
+                    <p class="product-card__description"></p>
+
+                    <span class="product-card__compound">Состав:</span>
+
+                    <ul class="product-card__components"></ul>
+
+                    <div class="product-card__purchase">
+                        <b class="product-card__sell">Цена:</b>
+                        <span class="product-card__price"></span>
+                    </div>
+                </li>
+            </template>
+        
         </div>
-        
-        <ul class="products-list"></ul>
-        
-        <template id="product-template">
-            <li class="product-card">
-                <img class="product-card__image" src="" alt="">
+    </main>
 
-                <span class="product-card__use"></span>
+    <footer class="footer">
+        <div class="footer__container container">
 
-                <h2 class="product-card__title"></h2>
+            <section class="footer__brand">
+                <h2 class="footer__title">Product Cards</h2>
+                <p class="footer__text">
+                    У Нас Самые Лучшие Продукты Для Кожи!
+                </p>
+                <div class="socials">
+                    <a class="socials__link" href="#" aria-label="Telegram">
+                        <img class="socials__icon" src="images/telegram_icon.svg" alt="Telegram">
+                    </a>
 
-                <p class="product-card__description"></p>
-
-                <span class="product-card__compound">Состав:</span>
-
-                <ul class="product-card__components"></ul>
-
-                <div class="product-card__purchase">
-                    <b class="product-card__sell">Цена:</b>
-                    <span class="product-card__price"></span>
+                    <a class="socials__link" href="#" aria-label="VK">
+                        <img class="socials__icon" src="images/vk_icon.svg" alt="VK">
+                    </a>
                 </div>
-            </li>
-        </template>
-    
+            </section>
+
+            <section class="footer__subscribe">
+                <h2 class="footer__subtitle">
+                    Подпишись на наши акции:
+                </h2>
+                <form class="subscribe-form" id="subscribe-form">
+                    <input class="subscribe-form__input" name="email" type="email" placeholder="Введи Email..." required>
+
+                    <button class="subscribe-form__button" type="submit">Подписаться</button>
+                </form>
+            </section>
+
+            <nav class="footer__nav">
+                <h2 class="footer__subtitle">Быстрые ссылки</h2>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Главная</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Магазин</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__line"></div>
+            <p class="footer__copyright">
+                www.product-cards.com &copy;all right reserve
+            </p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="overlay"></div>
+
+        <div class="modal__content">
+            <button id="closed-login" class="close-button">X</button>
+
+            <h2>Регистрация</h2>
+
+            <form class="registration-form" id="registration-form">
+
+                <div class="registration-form__field">
+                    <label for="first-name">Имя</label>
+                    <input id="first-name" name="firstName" type="text" placeholder="Введите имя" required>
+                </div>
+
+                <div class="registration-form__field">
+                    <label for="last-name">Фамилия</label>
+                    <input id="last-name" name="lastName" type="text" placeholder="Введите фамилию" required>
+                </div>
+
+                <div class="registration-form__field">
+                    <label for="birth-date">Дата рождения</label>
+                    <input id="birth-date" name="birthDate" type="date" required>
+                </div>
+
+                <div class="registration-form__field">
+                    <label for="login">Логин</label>
+                    <input id="login" name="login" type="text" placeholder="Введите логин" minlength="3" required>
+                </div>
+
+                <div class="registration-form__field">
+                    <label for="password">Пароль</label>
+                    <input id="password" name="password" type="password" placeholder="Введите пароль" minlength="6" required>
+                </div>
+
+                <div class="registration-form__field">
+                    <label for="password-confirm">Повторите пароль</label>
+                    <input id="password-confirm" name="passwordConfirm" type="password" placeholder="Повторите пароль" minlength="6" required>
+                </div>
+
+                <button class="registration-form__submit button" type="submit">Зарегистрироваться</button>
+
+            </form>
+
+        </div>
     </div>
 
     <script src="main.js"></script>
     <script src="homework-7.js"></script>
     <script src="homework-8.js"></script>
     <script type="module" src="homework-9.js"></script>
-    <script type="module" src="homework-10.js"></script>
+    <!-- <script type="module" src="homework-10.js"></script> -->
+    <script type="module" src="homework-11.js"></script>
 </body>
 </html>
