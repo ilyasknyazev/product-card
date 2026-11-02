@@ -9,7 +9,7 @@ class Drink {
     this.name = name;
     this.size = size;
     this.price = price;
-    this.temperature = temperature;
+    this.#temperature = temperature;
   }
 
   getInfo() {
@@ -17,13 +17,12 @@ class Drink {
   }
 
   getTemperature() {
-    console.log(`Температура напитка ${this.name}`);
     return this.#temperature;
   }
 
   setTemperature(temperature) {
     this.#temperature = temperature;
-    console.log(`Установка температуры ${this.name}: ${this.temperature}`);
+    console.log(`Установка температуры ${this.name}: ${temperature}`);
   }
 
   #prepare() {
@@ -57,7 +56,7 @@ class Coffee extends Drink {
   _make() {
     console.log(`Используем зерна ${this.beanType}`);
     console.log(`Используем молоко ${this.milkType}`);
-    this.setTemperature(95);
+    this.setTemperature(75);
   }
 }
 
@@ -69,7 +68,7 @@ class Tea extends Drink {
 
   _make() {
     console.log(`Используем чай ${this.teaType}`);
-    this.setTemperature(90);
+    this.setTemperature(65);
   }
 }
 
@@ -94,7 +93,7 @@ class Cacao extends Drink {
 
   _make() {
     console.log(`Используем сорт какао ${this.cacaoType}`);
-    this.setTemperature(80);
+    this.setTemperature(60);
   }
 }
 
@@ -115,3 +114,19 @@ class Cafe {
     console.log(`Стоимость заказа составляет: ${drink.price}`);
   }
 }
+
+const cafe = new Cafe("Косолапый", "Омск, ул. Медвежья 12");
+
+console.log(cafe.getInfo());
+
+const coffee = new Coffee("Капучино", "Средний", 220, 20, "Арабика", "Овсяное");
+const tea = new Tea("Зелёный чай", "Большой", 150, 20, "Сенча");
+const lemonade = new Lemonade("Лимонад", "Большой", 130, 15, "Лимон");
+const cacao = new Cacao("Какао", "Средний", 120, 20, "Криолло");
+
+console.log(coffee.getInfo());
+
+cafe.orderDrink(coffee);
+cafe.orderDrink(tea);
+cafe.orderDrink(lemonade);
+cafe.orderDrink(cacao);

@@ -4,7 +4,7 @@ import "./homework-9.js";
 import "./homework-10.js";
 import "./homework-11.js";
 import "./homework-12.js";
-import "./homerowk-13.js";
+import "./homework-13.js";
 
 const productCards = document.querySelectorAll(".product-card");
 const changeColorAllCardButton = document.querySelector(
