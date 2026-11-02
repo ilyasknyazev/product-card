@@ -97,3 +97,21 @@ class Cacao extends Drink {
     this.setTemperature(80);
   }
 }
+
+class Cafe {
+  constructor(name, location) {
+    this.name = name;
+    this.location = location;
+  }
+
+  getInfo() {
+    console.log("Информация о кафе");
+    return `${this.name}, ${this.location}`;
+  }
+
+  orderDrink(drink) {
+    console.log(`Заказ ${drink.name} кафе ${this.name}`);
+    drink.serve();
+    console.log(`Стоимость заказа составляет: ${drink.price}`);
+  }
+}
