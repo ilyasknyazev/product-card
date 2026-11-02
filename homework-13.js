@@ -34,7 +34,7 @@ class Drink {
   }
 
   _make() {
-    return 0;
+    throw new Error("Метод должен быть переопределён наследниками");
   }
 
   serve() {
